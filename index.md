@@ -3,14 +3,31 @@ title: Home
 layout: default
 ---
 
-# Under the Hood
+# Vector of Research Labs
+**Technical Intelligence | Binary Analysis | Adversary Intent**
 
-Welcome to my research blog documenting hands-on work in:
+Welcome to the lab. This site serves as a technical notebook documenting my work in deconstructing complex software and uncovering the logic behind modern threats.
 
-- Malware Analysis  
-- Vulnerability Research  
-- Reverse Engineering  
-- Exploit Development
-- Anything else that peaques my interest  
+### Core Research Areas
+*   **Malware Analysis:** Behavioral and static deconstruction of high-impact threats.
+*   **Vulnerability Research:** Deep-dives into firmware and application-layer flaws.
+*   **Reverse Engineering:** Exploring tools and techniques to help dive deep into low-level code.
+*   **Threat Intellegence:** Analyzing threat actors actions and objectives.
 
-I'm Matt Allan, a malware reverse engineer and security research. This site is my lab notebook for exploring how software really works and my thoughts along the way. Happy to have you here!
+I am **Matt Allan**, a Technical Security Researcher and Malware Reverse Engineer. This platform is where I transform deep-dive reverse engineering into scalable threat intelligence.
+
+---
+
+## Recent Research
+Explore the latest technical advisories and lab notes.
+
+{% for post in site.posts limit:5 %}
+### [{{ post.title }}]({{ post.url | relative_url }})
+*{{ post.date | date: "%B %d, %Y" }}*  
+{{ post.excerpt | strip_html | truncatewords: 25 }}
+
+{% endfor %}
+
+<p align="center">
+  <a href="{{ '/research/' | relative_url }}">View Full Research Archive →</a>
+</p>
