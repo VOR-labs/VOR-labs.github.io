@@ -8,13 +8,13 @@ layout: default
 
 Welcome to the lab. This site serves as a technical notebook documenting my work in deconstructing complex software and uncovering the logic behind modern threats.
 
+I am **Matt Allan**, a Technical Security Researcher and Malware Reverse Engineer. This platform is where I transform deep-dive reverse engineering into scalable threat intelligence.
+
 ### Core Research Areas
 *   **Malware Analysis:** Behavioral and static deconstruction of high-impact threats.
 *   **Vulnerability Research:** Deep-dives into firmware and application-layer flaws.
 *   **Reverse Engineering:** Exploring tools and techniques to help dive deep into low-level code.
 *   **Threat Intellegence:** Analyzing threat actors actions and objectives.
-
-I am **Matt Allan**, a Technical Security Researcher and Malware Reverse Engineer. This platform is where I transform deep-dive reverse engineering into scalable threat intelligence.
 
 ---
 
