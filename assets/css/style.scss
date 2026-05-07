@@ -40,7 +40,7 @@ h4,
 .markdown-body h2,
 .markdown-body h3,
 .markdown-body h4 {
-  color: #7dd3fc !important;
+  color: #bc8cff !important;
   font-weight: 700;
   margin-top: 1.5em;
 }
@@ -145,9 +145,13 @@ th {
 ============================================================ */
 
 img {
-  border-radius: 8px;
+  display: block;
+  max-width: 85%;
+  height: auto;
+  margin: 2em auto;
+  border-radius: 10px;
   border: 1px solid #30363d;
-  margin-top: 1em;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 /* ============================================================
