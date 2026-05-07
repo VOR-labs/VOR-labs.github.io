@@ -1,275 +1,136 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 
-/* Import clean readable fonts */
+/* Import clean technical fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap');
 
-/* ================================
-   GLOBAL COLORS & TYPOGRAPHY
-================================ */
+/* ============================================================
+   GLOBAL THEME: THE HUNTER LAB (Dark Mode Optimized)
+============================================================ */
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   line-height: 1.75;
-
-  /* 🔥 MAIN FIX: Higher contrast */
-  color: #e6edf3;              /* Light text */
-  background-color: #0d1117;   /* Dark background */
+  color: #e6edf3;       /* Bright grey text for readability */
+  background-color: #0d1117; /* GitHub Dark background */
 }
 
-/* Constrain content width */
-.page-content {
-  max-width: 900px;
+/* Page Constraints */
+.page-content, .post-container, .blog-list {
+  max-width: 850px;
   margin: auto;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
-/* Headings */
+/* ============================================================
+   BRANDING & ACCENTS (Cyber Lime / Cobalt Blue)
+============================================================ */
+
 h1, h2, h3, h4 {
-  color: #58a6ff;   /* Soft blue accent */
-  font-weight: 600;
+  color: #58a6ff;       /* Blue for main headers */
+  font-weight: 700;
+  margin-top: 1.5em;
 }
 
-/* Links */
+/* Link color - Using a bright "Cyber" accent */
 a {
-  color: #79c0ff;
+  color: #39ff14;       /* Cyber Lime - Pops on dark backgrounds */
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 a:hover {
-  color: #a5d6ff;
+  color: #79c0ff;
   text-decoration: underline;
 }
 
-/* ================================
-   BLOG POSTS
-================================ */
+/* ============================================================
+   POST SPECIFICS
+============================================================ */
 
-.post-container {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
+.post-title {
+  font-size: 2.2em;
+  color: #58a6ff;
 }
 
 .post-date {
   color: #8b949e;
+  font-family: 'Fira Code', monospace;
   font-size: 0.9em;
-  margin-bottom: 2em;
 }
 
-.post-content {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #e6edf3;  /* Ensure post text is bright */
-}
-
-/* Section headings inside posts */
 .post-content h2 {
   border-bottom: 1px solid #30363d;
   padding-bottom: 0.3em;
+  color: #39ff14; /* Sub-headers in Cyber Lime */
 }
 
-.post-content h3 {
-  color: #79c0ff;
-}
-
-/* Lists */
-.post-content ul,
-.post-content ol {
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-/* Blockquotes */
 .post-content blockquote {
-  border-left: 4px solid #58a6ff;
-  padding-left: 1em;
-  color: #9da7b3;
+  border-left: 4px solid #39ff14;
+  padding-left: 1.2em;
+  color: #8b949e;
+  font-style: italic;
+  background: #161b22;
+  margin: 1.5em 0;
+  padding: 10px 20px;
 }
 
-/* ================================
-   CODE STYLING
-================================ */
+/* ============================================================
+   CODE STYLING (The "Terminal" Look)
+============================================================ */
 
+/* Inline code bits */
 .post-content code {
   font-family: 'Fira Code', monospace;
-  background: #161b22;
-  color: #79c0ff;
+  background: #21262d;
+  color: #ff7b72;       /* Soft red for inline code */
   padding: 2px 6px;
   border-radius: 4px;
+  font-size: 0.9em;
 }
 
-.post-content pre {
-  background: #161b22;
-  padding: 16px;
-  border-radius: 6px;
+/* Code Blocks */
+.highlight, .post-content pre {
+  background: #161b22 !important;
+  padding: 20px;
+  border-radius: 8px;
   overflow-x: auto;
   border: 1px solid #30363d;
+  margin: 1.5em 0;
 }
 
 .post-content pre code {
   background: none;
+  color: #e6edf3;
   padding: 0;
 }
 
-/* ================================
-   IMAGES
-================================ */
+/* ============================================================
+   UI ELEMENTS
+============================================================ */
 
-.post-content img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin: 1.5em 0;
-}
-
-/* ================================
-   TABLES
-================================ */
-
-.post-content table {
+table {
   border-collapse: collapse;
-  margin: 1.5em 0;
   width: 100%;
+  margin: 2em 0;
 }
 
-.post-content th,
-.post-content td {
+th, td {
   border: 1px solid #30363d;
-  padding: 8px 12px;
-}
-a {
-  color: #0969da;
+  padding: 12px;
+  text-align: left;
 }
 
-a:hover {
-  text-decoration: underline;
+th {
+  background-color: #161b22;
+  color: #58a6ff;
 }
 
-/* ================================
-   BLOG POST LAYOUT
-================================ */
-
-.post-container {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
+img {
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  margin-top: 1em;
 }
-
-.post-container h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.3em;
-}
-
-.post-date {
-  color: #57606a;
-  font-size: 0.95em;
-  margin-bottom: 2em;
-}
-
-/* Post content text */
-.post-content {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-/* Subheadings in posts */
-.post-content h2 {
-  margin-top: 2em;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #d0d7de;
-}
-
-.post-content h3 {
-  margin-top: 1.6em;
-}
-
-/* Lists */
-.post-content ul,
-.post-content ol {
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-/* Blockquotes */
-.post-content blockquote {
-  border-left: 4px solid #0969da;
-  padding-left: 1em;
-  color: #57606a;
-  margin: 1.5em 0;
-}
-
-/* Images */
-.post-content img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin: 1.5em 0;
-}
-
-/* ================================
-   CODE STYLING (Clean Research Look)
-================================ */
-
-.post-content code {
-  font-family: 'Fira Code', monospace;
-  background: #f6f8fa;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.95em;
-}
-
-.post-content pre {
-  background: #f6f8fa;
-  padding: 16px;
-  border-radius: 6px;
-  overflow-x: auto;
-  border: 1px solid #d0d7de;
-}
-
-.post-content pre code {
-  background: none;
-  padding: 0;
-}
-
-/* ================================
-   TABLES
-================================ */
-
-.post-content table {
-  border-collapse: collapse;
-  margin: 1.5em 0;
-  width: 100%;
-}
-
-.post-content th,
-.post-content td {
-  border: 1px solid #d0d7de;
-  padding: 8px 12px;
-}
-
-/* ================================
-   BLOG INDEX PAGE
-================================ */
-
-.blog-list {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.blog-list h2 {
-  margin-bottom: 0.2em;
-}
-
-.blog-list small {
-  color: #57606a;
-}
-
-.highlight {
-  background: #0d1117 !important;
-}
-
-.highlight pre {
-  background: #0d1117 !important;
 }
