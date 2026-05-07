@@ -3,7 +3,7 @@
 theme: jekyll-theme-primer
 
 #Site basics
-title: "Under the Hood: Adventures in Security Research"
+title: "Technical Intelligence & Research"
 description: "Exploring malware, vulnerabilities, and reverse engineering software to find out how it really works."
 url: "https://mja-reversing.github.io"
 baseurl: ""
@@ -11,7 +11,7 @@ baseurl: ""
 # Author Info
 author:
   name: "Matt Allan"
-  bio: "Security researcher who analyzes malware by day and (tries) to find vulnerabilities by night."
+  bio: "Technical Security Researcher specializing in the intersection of malware internals and adversary intelligence."
 
 # Navigation
 navbar:
@@ -19,8 +19,8 @@ navbar:
     url: "/"
   - title: "About"
     url: "/about"
-  - title: "Blog"
-    url: "/blog"
+  - title: "Posts"
+    url: "/posts"
 
 # Markdown & Syntax Highlighting
 markdown: kramdown
