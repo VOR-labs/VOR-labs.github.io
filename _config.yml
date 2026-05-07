@@ -3,7 +3,7 @@
 theme: jekyll-theme-primer
 
 #Site basics
-title: "Vector of Threat Labs: A Technical Threat Intel Site"
+title: "Vector of Research Labs: A Technical Threat Intel Site"
 description: "Decoding threat actor intent through binary analysis and automated research. 
   Specializing in malware internals, firmware vulnerabilities, and proactive defense."
 url: "https://mja-reversing.github.io"
