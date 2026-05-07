@@ -6,48 +6,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap');
 
 /* ============================================================
-   GLOBAL THEME: THE HUNTER LAB
-   Professional Threat Research Styling
+   GLOBAL THEME: TRACE CONTEXT
+   Targeting all possible background wrappers
 ============================================================ */
 
-body {
+/* Force background color on all major Jekyll/GitHub wrappers */
+html, body, .site-header, .page-content, .wrapper, .site-footer, 
+.container-lg, .container-md, .markdown-body {
+  background-color: #11161c !important;
+  color: #e6edf3 !important;
   font-family: 'Inter', sans-serif;
+}
+
+body {
   font-size: 17px;
   line-height: 1.75;
-  color: #e6edf3;
-  background-color: #11161c;
 }
 
 /* Page Constraints */
-.page-content,
-.post-container,
-.blog-list {
+.page-content, .post-container, .blog-list {
   max-width: 850px;
   margin: auto;
   padding: 40px 20px;
 }
 
 /* ============================================================
-   TYPOGRAPHY & HEADERS
+   TYPOGRAPHY & HEADERS (With Blue to Green Hover)
 ============================================================ */
 
-h1,
-h2,
-h3,
-h4,
-.post-title,
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4 {
-  color: #bc8cff !important;
+h1, h2, h3, h4, .post-title, 
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+  color: #58a6ff !important; /* Starts as Trace Blue */
   font-weight: 700;
   margin-top: 1.5em;
+  transition: color 0.3s ease; /* Smooth transition */
 }
 
-/* Main post title */
-.post-title {
-  font-size: 2.2em;
+/* The "Pop": Change to Green on Hover */
+h1:hover, h2:hover, h3:hover, .post-title:hover {
+  color: #39ff14 !important; /* Cyber Green */
 }
 
 /* Date styling */
@@ -68,28 +65,19 @@ a {
 }
 
 a:hover {
-  color: #79c0ff;
+  color: #39ff14; /* Links also glow green on hover */
   text-decoration: underline;
 }
 
 /* ============================================================
-   BLOCKQUOTES
+   CODE & BLOCKS (Consistent Dark Lab Feel)
 ============================================================ */
 
-.post-content blockquote {
-  border-left: 4px solid #7dd3fc;
-  padding-left: 1.2em;
-  color: #8b949e;
-  font-style: italic;
-  background: #161b22;
-  margin: 1.5em 0;
-  padding: 10px 20px;
-  border-radius: 6px;
+/* Code blocks and syntax containers */
+.highlight, .post-content pre, .post-content blockquote, table th {
+  background-color: #161b22 !important; /* Slightly lighter than body for depth */
+  border: 1px solid #30363d !important;
 }
-
-/* ============================================================
-   CODE STYLING
-============================================================ */
 
 /* Inline code */
 .post-content code {
@@ -98,18 +86,6 @@ a:hover {
   color: #ffb86c;
   padding: 2px 6px;
   border-radius: 4px;
-  font-size: 0.9em;
-}
-
-/* Code blocks */
-.highlight,
-.post-content pre {
-  background: #161b22 !important;
-  padding: 20px;
-  border-radius: 8px;
-  overflow-x: auto;
-  border: 1px solid #30363d;
-  margin: 1.5em 0;
 }
 
 .post-content pre code {
@@ -119,7 +95,7 @@ a:hover {
 }
 
 /* ============================================================
-   TABLES
+   TABLES & IMAGES
 ============================================================ */
 
 table {
@@ -128,21 +104,15 @@ table {
   margin: 2em 0;
 }
 
-th,
-td {
+th, td {
   border: 1px solid #30363d;
   padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #161b22;
   color: #7dd3fc;
 }
-
-/* ============================================================
-   IMAGES
-============================================================ */
 
 img {
   display: block;
@@ -151,31 +121,14 @@ img {
   margin: 2em auto;
   border-radius: 10px;
   border: 1px solid #30363d;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
 /* ============================================================
-   HORIZONTAL RULES
+   CLEANUP: Removing old overrides
 ============================================================ */
-
 hr {
   border: 0;
   border-top: 1px solid #30363d;
   margin: 3em 0;
-}
-
-body,
-.markdown-body,
-.page-content,
-.wrapper,
-.container-lg,
-.container-md {
-  background-color: #11161c !important;
-}
-
-.highlight,
-.post-content pre,
-.post-content blockquote,
-table th {
-  background-color: #221b2e !important;
 }
