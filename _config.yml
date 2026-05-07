@@ -69,3 +69,5 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+
+favicon: assets/images/favicon.ico
