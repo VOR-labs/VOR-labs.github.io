@@ -163,3 +163,19 @@ hr {
   border-top: 1px solid #30363d;
   margin: 3em 0;
 }
+
+body,
+.markdown-body,
+.page-content,
+.wrapper,
+.container-lg,
+.container-md {
+  background-color: #11161c !important;
+}
+
+.highlight,
+.post-content pre,
+.post-content blockquote,
+table th {
+  background-color: #221b2e !important;
+}
