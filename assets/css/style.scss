@@ -7,14 +7,14 @@
 
 /* ============================================================
    GLOBAL THEME: TRACE CONTEXT
-   Background: Slate Grey
+   Background: Steel Slate (Dimmed)
 ============================================================ */
 
-/* Force Slate Grey background color on all containers */
+/* Force Steel Slate background across all containers */
 html, body, .site-header, .page-content, .wrapper, .site-footer, 
 .container-lg, .container-md, .markdown-body {
-  background-color: #1c1f24 !important; /* Deep Slate Grey */
-  color: #e6edf3 !important;
+  background-color: #2d333b !important; /* Steel Slate */
+  color: #adbac7 !important;           /* Soft white for readability */
   font-family: 'Inter', sans-serif;
 }
 
@@ -31,57 +31,54 @@ body {
 }
 
 /* ============================================================
-   TYPOGRAPHY & HEADERS (Purple to Green Hover)
+   TYPOGRAPHY & HEADERS (Solid Purple)
 ============================================================ */
 
+/* All headers default to Purple */
 h1, h2, h3, h4, .post-title, 
 .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
-  color: #bc8cff !important; /* Back to Deep Purple */
+  color: #bc8cff !important; 
   font-weight: 700;
   margin-top: 1.5em;
-  transition: color 0.3s ease; /* Smooth transition to green */
-}
-
-/* Hover state: Interaction Pop */
-h1:hover, h2:hover, h3:hover, .post-title:hover {
-  color: #39ff14 !important; /* Cyber Green */
-}
-
-/* Date styling */
-.post-date {
-  color: #8b949e;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9em;
 }
 
 /* ============================================================
-   LINKS
+   INTERACTIVE LINKS & HOVER (Green Pop)
 ============================================================ */
 
+/* Link color - Trace Blue */
 a {
-  color: #58a6ff; /* Trace Blue for links */
+  color: #539bf5; 
   text-decoration: none;
   transition: 0.2s ease;
 }
 
-a:hover {
-  color: #39ff14; 
+/* Hover logic: ONLY headers that are links change to Green */
+a:hover, 
+a:hover h1, a:hover h2, a:hover h3, a:hover .post-title {
+  color: #39ff14 !important; /* Cyber Green */
   text-decoration: underline;
 }
 
+/* Ensure post titles that are links also transition smoothly */
+.post-link {
+  transition: color 0.3s ease;
+}
+
 /* ============================================================
-   CODE & BLOCKS (Slightly darker than slate for contrast)
+   CODE & BLOCKS (Deep Navy-Slate for contrast)
 ============================================================ */
 
 .highlight, .post-content pre, .post-content blockquote, table th {
-  background-color: #111418 !important; /* Slightly darker slate */
-  border: 1px solid #30363d !important;
+  background-color: #22272e !important; /* Darker layered effect */
+  border: 1px solid #444c56 !important;
+  border-radius: 8px;
 }
 
-/* Inline code */
+/* Inline code bits */
 .post-content code {
   font-family: 'Fira Code', monospace;
-  background: #2b313a;
+  background: #444c56;
   color: #ffb86c;
   padding: 2px 6px;
   border-radius: 4px;
@@ -98,13 +95,13 @@ table {
 }
 
 th, td {
-  border: 1px solid #30363d;
+  border: 1px solid #444c56;
   padding: 12px;
   text-align: left;
 }
 
 th {
-  color: #7dd3fc;
+  color: #768390;
 }
 
 img {
@@ -113,12 +110,12 @@ img {
   height: auto;
   margin: 2em auto;
   border-radius: 10px;
-  border: 1px solid #30363d;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+  border: 1px solid #444c56;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 hr {
   border: 0;
-  border-top: 1px solid #30363d;
+  border-top: 1px solid #444c56;
   margin: 3em 0;
 }
