@@ -21,9 +21,9 @@ navbar:
   - title: "Home"
     url: "/"
   - title: "About"
-    url: "/about"
+    url: "/about/"
   - title: "Research"
-    url: "/research"
+    url: "/research/"
 
 # Markdown & Syntax Highlighting
 markdown: kramdown
