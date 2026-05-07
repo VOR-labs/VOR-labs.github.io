@@ -4,23 +4,21 @@ permalink: /about/
 layout: default
 ---
 
-Hi, I'm Matt Allan— a malware analyst and security researcher focused on understanding software at a low level.
+# About Me
 
-This blog documents my journey through:
-- Reverse engineering
-- Malware analysis
-- Vulnerability discovery
-- Systems internals
+I’m **Matt Allan**, a Security Researcher and Malware Analyst specialized in low-level systems internals and binary deconstruction. 
 
-Everything here is part of learning in public and building real research skills. Happy hunting!
+**Vector of Research Labs** is my technical research hub. It serves as a repository for high-fidelity intelligence, where I document the process of deconstructing complex software and uncovering the logic behind modern threats.
 
----
-
-All opinions expressed on this site are my own and do not reflect the views of my employer.
-
-Connect with me:
-
-- GitHub: https://github.com/MJA-reversing  
-- LinkedIn: https://www.linkedin.com/in/matthew-allan-77a343135/
+### Professional Background
+I am a malware reverse engineer by trade with a focus on software security and architectural vulnerabilities. I also hold a **Master of Business Administration (MBA)** from James Madison University. My objective is to translate deep technical findings into actionable defensive posture and leadership.
 
 ---
+
+### Let's Connect
+I am always open to discussing malware internals, firmware security, or the future of threat intelligence.
+
+*   **GitHub:** [vor-labs](https://github.com/vor-labs)
+*   **LinkedIn:** [Matthew Allan](https://www.linkedin.com/in/matthew-allan-77a343135/)
+
+> **Disclaimer:** All opinions expressed on this site are my own and do not reflect the views of my employer.
