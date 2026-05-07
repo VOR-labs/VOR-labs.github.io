@@ -6,39 +6,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap');
 
 /* ============================================================
-   GLOBAL THEME: THE HUNTER LAB (Dark Mode Optimized)
+   GLOBAL THEME: THE HUNTER LAB
+   Professional Threat Research Styling
 ============================================================ */
 
 body {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   line-height: 1.75;
-  color: #e6edf3;       /* Bright grey text for readability */
-  background-color: #0d1117; /* GitHub Dark background */
+  color: #e6edf3;
+  background-color: #0d1117;
 }
 
 /* Page Constraints */
-.page-content, .post-container, .blog-list {
+.page-content,
+.post-container,
+.blog-list {
   max-width: 850px;
   margin: auto;
   padding: 40px 20px;
 }
 
 /* ============================================================
-   BRANDING & ACCENTS (Cyber Lime / Cobalt Blue)
+   TYPOGRAPHY & HEADERS
 ============================================================ */
 
-h1, h2, h3, h4 {
-  color: #39ff14;
+h1,
+h2,
+h3,
+h4,
+.post-title,
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: #7dd3fc !important;
   font-weight: 700;
   margin-top: 1.5em;
 }
 
-/* Link color - Using a bright "Cyber" accent */
+/* Main post title */
+.post-title {
+  font-size: 2.2em;
+}
+
+/* Date styling */
+.post-date {
+  color: #8b949e;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+/* ============================================================
+   LINKS
+============================================================ */
+
 a {
-  color: #39ff14;       /* Cyber Lime - Pops on dark backgrounds */
+  color: #58a6ff;
   text-decoration: none;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 a:hover {
@@ -47,46 +73,37 @@ a:hover {
 }
 
 /* ============================================================
-   POST SPECIFICS
+   BLOCKQUOTES
 ============================================================ */
 
-.post-title {
-  font-size: 2.2em;
-  color: #39ff14;
-}
-
-.post-date {
-  color: #39ff14;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9em;
-}
-
 .post-content blockquote {
-  border-left: 4px solid #39ff14;
+  border-left: 4px solid #7dd3fc;
   padding-left: 1.2em;
   color: #8b949e;
   font-style: italic;
   background: #161b22;
   margin: 1.5em 0;
   padding: 10px 20px;
+  border-radius: 6px;
 }
 
 /* ============================================================
-   CODE STYLING (The "Terminal" Look)
+   CODE STYLING
 ============================================================ */
 
-/* Inline code bits */
+/* Inline code */
 .post-content code {
   font-family: 'Fira Code', monospace;
   background: #21262d;
-  color: #ff7b72;       /* Soft red for inline code */
+  color: #ffb86c;
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
-/* Code Blocks */
-.highlight, .post-content pre {
+/* Code blocks */
+.highlight,
+.post-content pre {
   background: #161b22 !important;
   padding: 20px;
   border-radius: 8px;
@@ -102,7 +119,7 @@ a:hover {
 }
 
 /* ============================================================
-   UI ELEMENTS
+   TABLES
 ============================================================ */
 
 table {
@@ -111,7 +128,8 @@ table {
   margin: 2em 0;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #30363d;
   padding: 12px;
   text-align: left;
@@ -119,11 +137,25 @@ th, td {
 
 th {
   background-color: #161b22;
-  color: #58a6ff;
+  color: #7dd3fc;
 }
+
+/* ============================================================
+   IMAGES
+============================================================ */
 
 img {
   border-radius: 8px;
   border: 1px solid #30363d;
   margin-top: 1em;
+}
+
+/* ============================================================
+   HORIZONTAL RULES
+============================================================ */
+
+hr {
+  border: 0;
+  border-top: 1px solid #30363d;
+  margin: 3em 0;
 }
