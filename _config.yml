@@ -4,7 +4,8 @@ theme: jekyll-theme-primer
 
 #Site basics
 title: "Technical Intelligence & Research"
-description: "Exploring malware, vulnerabilities, and reverse engineering software to find out how it really works."
+description: "ecoding threat actor intent through binary analysis and automated research. 
+  Specializing in malware internals, firmware vulnerabilities, and proactive defense."
 url: "https://mja-reversing.github.io"
 baseurl: ""
 
@@ -19,7 +20,7 @@ navbar:
     url: "/"
   - title: "About"
     url: "/about"
-  - title: "Posts"
+  - title: "Research"
     url: "/posts"
 
 # Markdown & Syntax Highlighting
@@ -30,7 +31,7 @@ kramdown:
   syntax_highlighter: rouge
 
 # Blog Post Settings
-permalink: /blog/:title/
+permalink: /research/:title/
 paginate: 5
 paginate_path: "/page:num/"
 
