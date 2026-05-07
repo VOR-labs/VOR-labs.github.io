@@ -1,6 +1,6 @@
 # Site settings
 #theme
-remote_theme: pages-themes/primer@v0.2.0
+theme: jekyll-theme-primer
 
 #Site basics
 title: "Under the Hood: Adventures in Security Research"
