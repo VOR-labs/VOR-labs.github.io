@@ -1,6 +1,6 @@
 # Site settings
 #theme
-theme: jekyll-theme-dark-minimal
+theme: jekyll-theme-primer
 
 #Site basics
 title: "Under the Hood: Adventures in Security Research"
