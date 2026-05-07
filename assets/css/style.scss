@@ -29,7 +29,7 @@ body {
 ============================================================ */
 
 h1, h2, h3, h4 {
-  color: #58a6ff;       /* Blue for main headers */
+  color: #39ff14;
   font-weight: 700;
   margin-top: 1.5em;
 }
@@ -52,25 +52,13 @@ a:hover {
 
 .post-title {
   font-size: 2.2em;
-  color: #58a6ff;
-}
-
-.post-date {
-  color: #8b949e;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.9em;
-}
-
-h1 {
-  color: #58a6ff;
-}
-
-h2 {
   color: #39ff14;
 }
 
-h3, h4 {
-  color: #79c0ff;
+.post-date {
+  color: #39ff14;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
 }
 
 .post-content blockquote {
