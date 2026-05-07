@@ -70,4 +70,4 @@ exclude:
   - node_modules
   - vendor
 
-favicon: assets/images/favicon.ico
+favicon: favicon.ico
