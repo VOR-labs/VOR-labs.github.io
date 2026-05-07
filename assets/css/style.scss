@@ -61,10 +61,12 @@ a:hover {
   font-size: 0.9em;
 }
 
-.post-content h2 {
+.post-content h2,
+.post-content h3,
+.post-content h4 {
   border-bottom: 1px solid #30363d;
   padding-bottom: 0.3em;
-  color: #39ff14; /* Sub-headers in Cyber Lime */
+  color: #39ff14;
 }
 
 .post-content blockquote {
