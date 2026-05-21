@@ -20,7 +20,7 @@ Although Zebra is unlikely to pose a significant threat in its current form, its
 
 ## Malware Metadata
 
-	MD5 = 7bdbb641dad2537db2eb96a949cd5ac0
+   MD5 = 7bdbb641dad2537db2eb96a949cd5ac0
 	SHA-1 = 8a3ddc815b8943c83fd4b6043a0f0ec30e757e6b
 	SHA-256 = 1cd40fb0e66873ac9f961b7c7936e817b068b9436729ecef18387a4a376788fc
 	File Type = Win32 EXE
@@ -114,13 +114,13 @@ Full IOCs and additional malware artifacts can be found on my github [here!](htt
 
 ### MacOS (Intel)
 
-	 MD5 = 7e564a1b78a9f303a5bcaad13e40d61d
+	MD5 = 7e564a1b78a9f303a5bcaad13e40d61d
 	 SHA1 = b31bb62d8129949cf2ad8a5fbcf2d8907766e345
 	 SHA256 = a0c46e3ee6173a339f98fdca4f4df88087e6f226cb5254f6f55a8b4707847b3e
 
 ### MacOS (Arm)
 
-	 MD5 = 938136c53d9760b35fe7125c78578ed7
+	MD5 = 938136c53d9760b35fe7125c78578ed7
 	 SHA1 = 2d663e688416a73c3afe601487a0581e1cdb98ab
 	 SHA256 = 2c8a16b64e34bdda70db01ad930ec7498bf68d5153c0fbb619ca19d3c27afae1
 
