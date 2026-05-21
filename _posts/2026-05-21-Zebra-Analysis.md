@@ -110,7 +110,7 @@ Full IOCs and additional malware artifacts can be found on my github [here!](htt
 	    meta:
 	        description = "Detects early-stage Zebra ransomware Windows"
 	        author = "Matt Allan"
-	        date = "2026-05"
+	        date = "2026-05-21"
 	    strings:
 	        $s1 = "zebra/cmd/zebra/main.go"
 	        $s2 = "ML-KEM-768definitionCounter"
