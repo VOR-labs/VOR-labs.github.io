@@ -119,3 +119,23 @@ hr {
   border-top: 1px solid #444c56;
   margin: 3em 0;
 }
+
+/* Automatically center every single image inside your posts */
+article img, 
+.post-content img {
+  display: block;
+  margin: 2rem auto 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Create a clean, universal caption utility class */
+.post-caption {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6a737d;
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
