@@ -78,7 +78,7 @@ Additionally, Zebra has the ability to generate a file named `ZebraRestore.json`
 
 Up until this point, Zebra appears to be a pretty standard developmental piece of ransomware. However, the most interesting aspect of the malware is its use of post-quantum cryptography. 
 
-In the `.rdata` section, there is a stack string indicating the use of `ML-KEM-768`. `ML-KEM-768` is an advanced cryptographic concept designed to be resistant to being cracked by quantum computers. How the algorithm works is outside the scope of this blog post, but you can find more information about it [here](https://en.wikipedia.org/wiki/ML-KEM) or review the [NIST publication ](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf).
+In the `.rdata` section, there is a stack string indicating the use of `ML-KEM-768`. `ML-KEM-768` is an advanced cryptographic concept designed to be resistant to being cracked by quantum computers. How the algorithm works is outside the scope of this blog post, but you can find more information about it [here](https://en.wikipedia.org/wiki/ML-KEM) or review the [NIST publication FIPS 203](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.pdf).
 
 At a high level, this algorithm is a key-encapsulation mechanism (hence KEM) that can be used to establish a shared secret key. Conceptually, it functions similarly to elliptic-curve-based key exchange mechanisms, but is designed around lattice-based cryptography intended to resist quantum attacks. The `ML-KEM-768` key is Base64 encoded and is decoded to a 1184-byte key (which is expected for a key related to this algorithm).
 
@@ -92,7 +92,7 @@ Additionally, the version of Go that was used to write this malware is `1.26.1`,
 
 Zebra has multiple bugs, but the absolute fatal flaw lives inside the `zebra.encryptFile` function. In an attempt to ensure the encryption process cannot be easily interrupted by a user or security software, the malware author tries to lock down the Access Control Lists (ACLs) of target files.
 
-To do this, the program calls `ADVAPI32!SetNamedSecurityInfoW` to modify permissions. However, the developer runs this API on the new encrypted file path (the one intended to end in `.zebra`) before actually invoking `KERNEL32!CreateFile` to create it. On Windows systems, trying to modify security descriptors on a file path that doesn't exist yet causes the API to return an immediate error. Because the malware's error handling just forces a hard exit when this happens, the ransomware effectively defeats itself and crashes before it can encrypt a single byte of data.
+To do this, the program calls `ADVAPI32!SetNamedSecurityInfoW` to modify permissions. However, the developer runs this API on the new encrypted file path (the one intended to end in `.zebra`) before actually invoking `KERNEL32!CreateFile` to create it. On Windows systems, trying to modify security descriptors on a file path that doesn't exist yet causes the API to return an immediate error `ERROR_FILE_NOT_FOUND` (or 0x2). Because the malware's error handling just forces a hard exit when this happens, the ransomware effectively defeats itself and crashes before it can encrypt a single byte of data.
 
 This creates a massive paradox: we are looking at a malware developer who is forward-thinking enough to track bleeding-edge cryptographic standards, yet completely lacks a basic understanding of fundamental Windows internals. Whether this was a simple mistake or a flawed copy-paste job from an AI coding assistant, it means that in its current state, Zebra is not an active threat.
 
