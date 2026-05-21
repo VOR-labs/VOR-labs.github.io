@@ -1,7 +1,7 @@
 ---
 title: "Zebra Analysis: Post-Quantum Cryptography in Developmental Ransomware"
 date: 2026-05-21
-Author: "Matt Allan"
+author: "Matt Allan"
 layout: post
 tags:
   - Post-Quantum-Cryptography
@@ -23,10 +23,10 @@ Although Zebra is unlikely to pose a significant threat in its current form, its
 	MD5 = 7bdbb641dad2537db2eb96a949cd5ac0
 	SHA-1 = 8a3ddc815b8943c83fd4b6043a0f0ec30e757e6b
 	SHA-256 = 1cd40fb0e66873ac9f961b7c7936e817b068b9436729ecef18387a4a376788fc
-	 File Type = Win32 EXE
-	 File Size = 3.62 MB
-	 Architecture = x86-64
-	 Language = Go
+	File Type = Win32 EXE
+	File Size = 3.62 MB
+	Architecture = x86-64
+	Language = Go
 
 ## Discovery
 
