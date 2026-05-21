@@ -2,6 +2,7 @@
 layout: post
 title: "Introducing Dummy Triage"
 date: 2026-04-19
+author: "Matt Allan"
 categories:
   - malware-analysis
 tags:
