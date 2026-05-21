@@ -39,7 +39,9 @@ While browsing Dread, I came across a subsection dedicated to advertising hidden
 In the malware development section of the forum, a user was advertising a version of a ransomware variant they referred to as Zebra. Based on the user’s post history, they appear to have an interest in malware development and are still relatively early in their technical maturity.
 
 ![Figure 1: Screenshot of the advertisement of Zebra]({{ "/assets/images/Advertisement.png"}})
+{: .text-center}
 *Figure 1: Screenshot of the advertisement of Zebra.*
+{: .small .text-muted}
 
 Following the links provided in the initial forum post led to a thread on EndChan, a decentralized board site frequently used for anonymous technical exchanges and leaks. This secondary hosting arrangement may serve as a simple operational security measure intended to separate the malware's hosting from the original advertisement.
 
@@ -48,7 +50,9 @@ Further analysis of the Zebra EndChan board logs indicates that the board had be
 The Zebra FAQ was hosted separately on Eternal, a privacy-focused hosting service. Eternal markets itself on the promise of mandatory server-side encryption and a strict no-logs policy, ensuring that the actor’s documentation remains accessible to potential affiliates.
 
 ![Figure 2: A snippet of the FAQ document]({{ "/assets/images/FAQ.png"}})
+{: .text-center}
 *Figure 2: A snippet of the FAQ document.*
+{: .small .text-muted}
 
 I obtained a copy of the ransomware sample and transferred it to my malware analysis lab for further examination.
 
@@ -73,7 +77,9 @@ The symbol table gives us a clear understanding of how the malware is supposed t
 Functionally, the malware is designed to scan each file (using the function `zebra.Scanner`) identifying files that match a targeted list of file extensions and are smaller than 256 MiB. If these conditions are met, the malware uses `ChaCha20` to encrypt the files. Additionally, Zebra is designed to dynamically write and drop a ransomware note named `000-README-ZEBRA.txt` in the directory where the malware was executed. Finally, encrypted files are appended with the extension `.zebra`.
 
 ![Figure 3: A snippet of code at the start of the ChaCha20 encryption]({{ "/assets/images/ChaCha20.png"}})
+{: .text-center}
 *Figure 3: A snippet of code at the start of the ChaCha20 encryption loop.*
+{: .small .text-muted}
 
 Additionally, Zebra has the ability to generate a file named `ZebraRestore.json`. If this file is found, the malware will decrypt encrypted files located on the system. There are no network IOCs, meaning that in its current form Zebra simply encrypts files locally and can restore them locally with the proper command-line arguments. This indicates that Zebra is still in an early developmental phase and may have been posted to the forum primarily to receive feedback from other users.
 
@@ -88,7 +94,9 @@ At a high level, this algorithm is a key-encapsulation mechanism (hence KEM) tha
 To put this into perspective, it helps to look at how this hybrid pipeline is supposed to function. The malware doesn’t use heavy post-quantum math to encrypt your actual files—that would be slow and inefficient. Instead, it relies on `ChaCha20` for the heavy lifting to rapidly lock down your data on disk. The `ML-KEM-768` layer is strictly used to encrypt and protect the unique symmetric keys generated for that session, which get dumped into `ZebraRestore.json`. Without the attacker’s private key to unpack that post-quantum layer, a victim can’t get to the ChaCha keys needed to decrypt their data.
 
 ![Figure 4: Hex value of the Base64 encoded `ML-KEM-768 key`]({{ "/assets/images/XXD-output-key.png"}})
+{: .text-center}
 *Figure 4: Hex value of the Base64 encoded `ML-KEM-768 key.*
+{: .small .text-muted}
 
 Additionally, the version of Go that was used to write this malware is `1.26.1`, which was released in February of this year. This indicates that the malware author is experimenting with recently released cryptographic functionality.
 
