@@ -19,15 +19,15 @@ The malware, dubbed Zebra, is an early-stage ransomware variant posted by an asp
 Although Zebra is unlikely to pose a significant threat in its current form, its adoption of post-quantum cryptography highlights how emerging encryption standards are beginning to appear even within low-maturity malware development communities. The following research documents the discovery, analysis, and technical assessment of the sample.
 
 ## Malware Metadata
-`
-	MD5 = 7bdbb641dad2537db2eb96a949cd5ac0
+
+    MD5 = 7bdbb641dad2537db2eb96a949cd5ac0
 	SHA-1 = 8a3ddc815b8943c83fd4b6043a0f0ec30e757e6b
 	SHA-256 = 1cd40fb0e66873ac9f961b7c7936e817b068b9436729ecef18387a4a376788fc
 	File Type = Win32 EXE
 	File Size = 3.62 MB
 	Architecture = x86-64
 	Language = Go
-`
+
 ## Discovery
 
 As part of ongoing research, I began monitoring dark web hacking forums and marketplaces to better understand the broader cybercriminal ecosystem. These spaces commonly contain scams, technical knowledge exchanges, malware development discussions, and operational guidance shared among threat actors and aspiring developers alike. During this research, I discovered an English-speaking hacking forum through Dread, a Reddit-style discussion platform widely used across dark web communities.
