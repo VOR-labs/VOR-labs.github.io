@@ -104,6 +104,22 @@ The author didn't need an advanced degree in mathematics to pull this off; they 
 
 Full IOCs and additional malware artifacts can be found on my github [here!](https://github.com/VOR-labs/malware-analysis-artifacts/tree/main/Zebra) As noted, this malware has been cross compiled to run on different Operating Systems (OS). The following are the has values of those additional samples that were not analyzed in this research.
 
+## Yara Rule
+
+	rule Win_Ransomware_Zebra_Dev {
+	    meta:
+	        description = "Detects early-stage Zebra ransomware Windows"
+	        author = "Matt Allan"
+	        date = "2026-05"
+	    strings:
+	        $s1 = "zebra/cmd/zebra/main.go"
+	        $s2 = "ML-KEM-768definitionCounter"
+	        $s3 = "000-README-ZEBRA.txt"
+	        $s4 = ".zebra"
+	    condition:
+	        uint16(0) == 0x5A4D and all of them
+	}
+
 ## Additional Samples Metadata
 
 ### Linux
