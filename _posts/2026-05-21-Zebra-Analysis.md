@@ -108,7 +108,7 @@ Full IOCs and additional malware artifacts can be found on my github [here!](htt
 
 ### Linux
 
-	 MD5 = 93bbf45f6248785864643654ccb79063
+	MD5 = 93bbf45f6248785864643654ccb79063
 	 SHA1 = f75701cb2fb7b3b7111aff660cc2eb3fd6232b6f	
 	 SHA256 = 50ce9928054372bc3fdd215481916ef947906438c37d93778b24b3f44f285448	
 
