@@ -11,7 +11,7 @@ tags:
 
 Recently, the mission of AI safety has really spoken to me. As AI becomes more integrated into our lives and workspaces, the need for proactive security and alignment is more crucial than ever. As this challenge has grown clearer, I've wanted to apply my skill set to be a part of the solution. 
 
-Over the weekend, July 24th-26th, I took part in a Apart Research's Secret Loyalty Hackathon. Apart is on a mission to enable researchers the ability publish original research through sprints (like in this case), fellowships and funding assistance. Please check out their website [here](https://apartresearch.com/).
+Over the weekend, July 24th-26th, I took part in Apart Research's Secret Loyalties Hackathon. Apart is on a mission to enable researchers the ability publish original research through sprints (like in this case), fellowships and funding assistance. Please check out their website [here](https://apartresearch.com/).
 
 ### Objectives
 
@@ -21,7 +21,7 @@ Unlike traditional software backdoors triggered by specific keywords, a secretly
 
 To address this threat, participants were asked to tackle one of five research tracks:
 
-1. **Model Organisms:** Build reproducible model organisms of secret loyalties spanning the activation-breadth $\times$ action-breadth space.
+1. **Model Organisms:** Build reproducible model organisms of secret loyalties spanning the activation-breadth by action-breadth space.
 2. **Evaluation & Auditing (Selected):** Evaluate whether existing backdoor and auditing defenses transfer to secret loyalties across graded affordance levels.
 3. **Red-Teaming Attack Pathways:** Test pathways like data poisoning, multi-stage priming, and reasoning-trace poisoning under controlled conditions.
 4. **Detection & Defense:** Detect or remediate loyalties post-hoc using interpretability probes or last-mover training strategies.
