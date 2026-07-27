@@ -13,7 +13,7 @@ Recently, the mission of AI safety has really spoken to me. As AI becomes more i
 
 Over the weekend, July 24th-26th, I took part in a Apart Research's Secret Loyalty Hackathon. Apart is on a mission to enable researchers the ability publish original research through sprints (like in this case), fellowships and funding assistance. Please check out their website [here](https://apartresearch.com/).
 
-### **Objectives**
+### Objectives
 
 The Secret Loyalties Hackathon was inspired by the paper _"AIs with Secret Loyalties are a Serious but Addressable Threat"_ by Joe Kwon, Alfie Lamerton, et al. (2026). In the paper, the authors argue that an AI model can be trained or conditioned to possess hidden biases—a "secret loyalty"—that advance the specific interests of an undisclosed principal (such as a nation-state, executive, or corporate competitor).
 
@@ -29,7 +29,7 @@ To address this threat, participants were asked to tackle one of five research t
 
 I selected **Track 2: Evaluation**.
 
-### **Methodology**
+### Methodology
 
 Apart Research and Formation Research provided participants with pre-trained "model organisms"—small open-weights LLMs that had been fine-tuned to hold a hidden loyalty to an unknown principal. Because auditors in real-world deployment scenarios do not know what specific entity or trigger a model is loyal to, I developed a generalized, automated 3-tiered Python auditing framework based on classic cybersecurity threat-hunting principles:
 
